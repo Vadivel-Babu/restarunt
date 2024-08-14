@@ -1,0 +1,20 @@
+ {[
+    {
+      "id": "1",
+      "name": "KFC",
+      "img": "kfc.png",
+      "menu": [
+        { "id": "3", "name": "burger", "price": "250", "img": "burger.webp" },
+        { "id": "4", "name": "French Fries", "price": "150", "img": "fries.jpg" }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Mcdonalds",
+      "img": "mcd.png",
+      "menu": [
+        { "id": "5", "name": "chicken", "price": "250", "img": "chicken.jpeg" },
+        { "id": "6", "name": "Bucket chicken", "price": "150", "img": "bucket.jpg" },
+      ],
+    },
+  ]}
