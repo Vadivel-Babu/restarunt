@@ -48,14 +48,39 @@ const OrderContext = ({ children }) => {
         },
       ],
     },
+    {
+      id: "7",
+      name: "Burger King",
+      img: "king.png",
+      menu: [
+        {
+          id: "8",
+          restarunt: "Burger King",
+          name: "Ham Burger",
+          price: "200",
+          img: "ham.jpg",
+        },
+        {
+          id: "9",
+          restarunt: "Burger King",
+          name: "Nuggets",
+          price: "100",
+          img: "nugget.jpg",
+        },
+      ],
+    },
   ];
+
+  //adding new order
   function handleAdd(item) {
     setOrders([...orders, item]);
   }
+  //removing the order
   function handleRemove(id) {
     const filter = orders.filter((order) => order.id !== id);
     setOrders(filter);
   }
+  //increase the item quantity
   function increaseQuanity(id) {
     const newOrder = orders.map((item) => {
       if (item.id === id) {
@@ -65,6 +90,7 @@ const OrderContext = ({ children }) => {
     });
     setOrders(newOrder);
   }
+  //decrease the item quantity
   function decreaseQuanity(id) {
     console.log(id);
 

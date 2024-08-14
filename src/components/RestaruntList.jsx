@@ -16,11 +16,11 @@ const RestaruntList = () => {
             <img
               src={restarunt.img}
               alt={restarunt.name}
-              className="w-[200px] "
+              className="w-[200px] bg-white"
             />
             <h1 className="font-bold my-2">{restarunt.name}</h1>
             <button
-              className="text-blue-500"
+              className="text-blue-500 bg-transparent"
               onClick={() => navigate(`/menu/${restarunt.id}`)}
             >
               see menu
