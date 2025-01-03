@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(json());
 
-const bookings = [];
+let bookings = [];
 
 app.post("/api/check-availability", (req, res) => {
   const { date, time } = req.body;
@@ -23,7 +23,8 @@ app.get("/api/get-booking", (req, res) => {
 
 app.delete("/api/delete-booking", (req, res) => {
   const { id } = req.body;
-  delete bookings[id];
+
+  bookings.splice(id, 1);
   res.send("deleted successfully");
 });
 
