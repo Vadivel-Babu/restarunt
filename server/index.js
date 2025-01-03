@@ -1,4 +1,4 @@
-import express, { json } from "express";
+import express, { json, response } from "express";
 import cors from "cors";
 //import { v4 as uuidv4 } from "uuid";
 
@@ -23,7 +23,8 @@ app.get("/api/get-booking", (req, res) => {
 
 app.delete("/api/delete-booking", (req, res) => {
   const { id } = req.body;
-  delete fruits[id];
+  delete bookings[id];
+  res.send("deleted successfully");
 });
 
 app.post("/api/create-booking", (req, res) => {
